@@ -88,7 +88,6 @@ app.delete('/',(req,res)=>{
  * PUT or DELETE req doest make sense so what we can do ...
  * we can check if there impure blood present or not else we can return status code 401 or 411
 */
-
 function checkImpure(){
     let includeImpureBlood = false;
     for (let i = 0; i < user[0].blood.length; i++) {
@@ -98,6 +97,8 @@ function checkImpure(){
     }
     return includeImpureBlood
 }
+
+
 
 app.listen(3000,()=>{
     console.log("server is running now")
