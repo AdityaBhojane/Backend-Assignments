@@ -8,11 +8,14 @@ app.get('/',(req,res)=>{
     res.end('hello')
 })
 
-app.get('/sum',(req,res)=>{
+app.get('/num',(req,res)=>{
     // 411
-    const n = parseInt(req.query.num)
+    // if user give wrong input
+    const n = parseInt(req.query.n)
     const sum = () => n + 10;
     res.end("sum is " + sum())
+    // http://localhost:3000/?n=123
+    // above get handler overwrite this so use '/num' route
 })
 
 app.get('/error',(req,res)=>{

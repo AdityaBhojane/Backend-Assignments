@@ -10,10 +10,6 @@ fs.writeFile("./files/newFile.css",content,()=>{
 
 
 
-
-
-
-
 // Async code example
 
 const fs = require('fs');
